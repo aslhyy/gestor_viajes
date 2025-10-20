@@ -72,18 +72,18 @@ public function delete($id) {
     }
 
 public function byUser($user_id) {
-        $conn = connect_db();
-        $stmt = mysqli_prepare($conn, "SELECT r.*, t.nombre AS viaje_nombre
-                                       FROM reservas r 
-                                       JOIN viajes t ON r.viaje_id = t.id
-                                       WHERE r.usuario_id = ?");
-        mysqli_stmt_bind_param($stmt, 'i', $user_id);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        mysqli_stmt_close($stmt);
-        mysqli_close($conn);
-        return $rows;
-    }
+    $conn = connect_db();
+    $stmt = mysqli_prepare($conn, "SELECT r.*, t.destino AS viaje 
+                                   FROM reservas r 
+                                   JOIN viajes t ON r.viaje_id = t.id
+                                   WHERE r.usuario_id = ?");
+    mysqli_stmt_bind_param($stmt, 'i', $user_id);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+    return $rows;
+}
 }
 
