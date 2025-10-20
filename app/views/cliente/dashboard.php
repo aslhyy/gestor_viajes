@@ -1,0 +1,1 @@
+<?php require __DIR__ . '/../shared/header.php'; ?><h2>Panel CLIENTE</h2><p><a href='?p=trips'>Ver viajes</a> | <a href='?p=reservations'>Mis reservas</a></p><?php require __DIR__ . '/../shared/footer.php'; ?>
