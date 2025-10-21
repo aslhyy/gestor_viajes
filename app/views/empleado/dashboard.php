@@ -1,1 +1,24 @@
-<?php require __DIR__ . '/../shared/header.php'; ?><h2>Panel EMPLEADO</h2><p><a href='?p=reservations'>Ver y editar reservas</a></p><?php require __DIR__ . '/../shared/footer.php'; ?>
+<?php require __DIR__ . '/../shared/header.php'; ?>
+
+<div class="min-h-[86vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#2685BF] via-[#5FB6D9] to-[#94D7F2] font-[Poppins] px-4 py-10">
+
+  <!-- Contenedor principal -->
+  <div class="bg-white/90 backdrop-blur-md border border-white/40 shadow-2xl rounded-2xl p-8 max-w-xl w-full text-center space-y-6">
+
+    <!-- Título -->
+    <h2 class="text-3xl font-bold text-[#2685BF] flex items-center justify-center gap-2">
+      <i class="fa-solid fa-user-tie text-[#2685BF]"></i> Panel EMPLEADO
+    </h2>
+
+    <!-- Enlace principal -->
+    <p class="text-lg text-gray-700 font-medium flex items-center justify-center">
+      <a href='?p=reservations' 
+         class="text-white bg-[#2685BF] hover:bg-[#3D9DD9] px-6 py-2 rounded-lg transition shadow-md flex items-center gap-2">
+        <i class="fa-solid fa-calendar-check"></i> Ver y editar reservas
+      </a>
+    </p>
+
+  </div>
+</div>
+
+<?php require __DIR__ . '/../shared/footer.php'; ?>
